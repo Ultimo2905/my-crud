@@ -1,0 +1,11 @@
+.table-header-cell{
+    display:flex;
+}
+
+.table-header-cell__arow{
+    color:black;
+}
+
+.table-header-cell__arow_active{
+    color:gray;
+}

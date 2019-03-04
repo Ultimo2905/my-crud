@@ -1,0 +1,15 @@
+.article-list__li {
+    list-style: none;
+}
+.textColorBlack{
+    color: #0b0b0b;
+}
+.container{
+    color: black;
+}
+ul{
+    padding: 0;
+}
+.cart{
+    width: 100%;
+}

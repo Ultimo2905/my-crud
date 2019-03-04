@@ -22,20 +22,52 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+            integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+    <button class="tablink" onclick="openPage('root', this, '#484242')" id="defaultOpen">Users</button>
+    <button class="tablink" onclick="openPage('News', this, 'green')" >News</button>
+    <button class="tablink" onclick="openPage('Contact', this, 'blue')">Contact</button>
+    <button class="tablink" onclick="openPage('About', this, 'orange')">About</button>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <div id="root" class="tabcontent">
+    </div>
+
+    <div id="News" class="tabcontent">
+    </div>
+
+    <div id="Contact" class="tabcontent">
+      <h3>Contact</h3>
+      <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+      <h3>About</h3>
+      <p>Who we are and what we do.</p>
+    </div>
+  <script>
+    function openPage(pageName, elmnt, color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+  </script>
   </body>
 </html>

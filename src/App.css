@@ -22,6 +22,9 @@
 .App-link {
   color: #61dafb;
 }
+.MarElem{
+  margin: 10px;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -30,4 +33,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+.addUserModal{
+  margin: 15px;
 }
